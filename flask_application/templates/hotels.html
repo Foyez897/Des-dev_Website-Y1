@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <title>World Hotel</title>
+    <style>
+
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .hotels {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .hotel {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 160px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+
+        .hotel img {
+            width: 200px; /* Adjust the width as needed */
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            aloign: center;
+
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="nav__logo">World Hotel</div>
+    <ul class="nav__links">
+      <li class="link"><a href="{{ url_for('index') }}">Home</a></li>
+      <li class="link"><a href="{{ url_for('registration') }}">Register</a></li>
+      <li class="link"><a href="{{ url_for('login') }}">Login</a></li> 
+      <li class="link"><a href="{{ url_for('hotels') }}">Hotels</a></li>     
+      <li class="link"><a href="{{ url_for('bookings') }}">Booking</a></li>
+      <li class="link"><a href="{{ url_for('contact') }}">Contact</a></li>
+      <li class="link"><a href="{{ url_for('admin') }}">Admin</a></li>
+    </ul>
+  </nav>
+    <section class="hotels">
+        <div class="container">
+            <h1>Our Hotels in the UK</h1>
+            <div class="hotel">
+                <img src="{{ url_for ('static', filename = 'hotelL.jpg')}}" alt="Hotel A - Glasgow">
+                <h2> The Peninsula - London</h2>
+                <p>Capacity: 100 rooms</p>
+                <p>Standard Room Price: £80</p>
+                <p>Double Room Price: £120</p>
+                <p>Amenities: Free WiFi, Swimming Pool</p>
+                <a href="{{ url_for('bookings') }}">Book Now</a>
+            </div>
+            <div class="hotel">
+                <img src="{{ url_for ('static', filename = 'hotelB.jpg')}}" alt="Hotel C - Bristol">
+                <h2> Bristol color hotel - Bristol</h2>
+                <p>Capacity: 80 rooms</p>
+                <p>Standard Room Price: £70</p>
+                <p>Double Room Price: £110</p>
+                <p>Amenities: Free WiFi, Spa</p>
+                <a href="{{ url_for('bookings') }}">Book Now</a>
+            </div>
+            <div class="hotel">
+                <img src="{{ url_for ('static', filename = 'hotelEB.jpg')}}" alt="Hotel D - Edinburgh">
+                <h2> The Plaza Hotel - Edinburgh</h2>
+                <p>Capacity: 90 rooms</p>
+                <p>Standard Room Price: £75</p>
+                <p>Double Room Price: £115</p>
+                <p>Amenities: Free WiFi, Restaurant</p>
+                <a href="{{ url_for('bookings') }}">Book Now</a>
+            </div>
+            <div class="hotel">
+                <img src="{{ url_for ('static', filename = 'hotelS.jpg')}}" alt="Hotel E - Cardiff">
+                <h2> Atlantis The Palm - Swansea</h2>
+                <p>Capacity: 110 rooms</p>
+                <p>Standard Room Price: £85</p>
+                <p>Double Room Price: £130</p>
+                <p>Amenities: Free WiFi, Beach Access</p>
+                <a href="{{ url_for('bookings') }}">Book Now</a>
+            </div>
+            <div class="hotel">
+                <img src="{{ url_for ('static', filename = 'hotelG.jpg')}}" alt="Hotel E - Cardiff">
+                <h2> The Ritz-Carlton - Glasgow </h2>
+                <p>Capacity: 110 rooms</p>
+                <p>Standard Room Price: £85</p>
+                <p>Double Room Price: £130</p>
+                <p>Amenities: Free WiFi, Beach Access</p>
+                <a href="{{ url_for('bookings') }}">Book Now</a>
+            </div>
+            <div class="hotel">
+                <img src="{{ url_for ('static', filename = 'hotelNC.jpg')}}" alt="Hotel E - Cardiff">
+                <h2> Marina Bay Sands - New Castle</h2>
+                <p>Capacity: 110 rooms</p>
+                <p>Standard Room Price: £85</p>
+                <p>Double Room Price: £130</p>
+                <p>Amenities: Free WiFi, Beach Access</p>
+                <a href="{{ url_for('bookings') }}">Book Now</a>
+            </div>
+        </div>
+    </section>
+  <footer class="footer">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <h3>world hotel</h3>
+        <p>
+          World hotel is a premier hotel booking website that offers a seamless and convenient way to find and book accommodations over the UK.
+        </p>
+        <p>
+          With a user-friendly interface and a vast selection of hotels, World hotel aims to provide a stress-free experience for travelers seeking the perfect stay.
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li>About Us</li>
+          <li>Our Team</li>
+          <li>Blog</li>
+          <li>Book</li>
+          <li>Contact Us</li>  
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <li>FAQs</li>
+        <li>Terms & Conditions</li>
+        <li>Privacy Policy</li>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <li>Social Media</li>
+        <li>Help Center</li>
+        <li>Partnerships</li>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2024. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Password</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url("/images/background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .update-password-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+        }
+        .update-password-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .update-password-container label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .update-password-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .update-password-container button {
+            background-color: #ffc107;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        .update-password-container button:hover {
+            background-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <div class="update-password-container">
+        <h2>Update Password</h2>
+        <form action="/admin/update-password" method="POST">
+            <label for="current-password">Current Password:</label>
+            <input type="password" id="current-password" name="current-password" required>
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" name="new-password" required>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <button type="submit">Update Password</button>
+        </form>
+    </div>
+</body>
+</html>

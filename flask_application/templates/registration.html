@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <title>World Hotel</title>
+    <script src="checkIfLogged.js" defer></script>
+<style>
+body 
+.header__image__container {
+    position: relative;
+    min-height: 500px;
+    background-image: linear-gradient(
+        to right,
+        rgba(44, 56, 85, 0.9),
+        rgba(100, 125, 187, 0.1)
+      ),
+      url("{{ url_for('static', filename='header.jpg') }}");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+}
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    width: 300px;
+    margin: 0 auto; /* Center the form horizontally */
+    position: relative;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align form labels and inputs to the left */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #6c757d; /* Light gray color */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button.btn {
+    background-color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #555;
+}
+
+</style>
+</head>
+<body>
+ <header>
+  <nav>
+    <div class="nav__logo">World Hotel</div>
+    <ul class="nav__links">
+      <li class="link"><a href="{{ url_for('index') }}">Home</a></li>
+      <li class="link"><a href="{{ url_for('registration') }}">Register</a></li>
+      <li class="link"><a href="{{ url_for('login') }}">Login</a></li> 
+      <li class="link"><a href="{{ url_for('hotels') }}">Hotels</a></li>     
+      <li class="link"><a href="{{ url_for('bookings') }}">Booking</a></li>
+      <li class="link"><a href="{{ url_for('contact') }}">Contact</a></li>
+      <li class="link"><a href="{{ url_for('admin') }}">Admin</a></li>
+    </ul>
+  </nav>
+  </header>
+        <div class="header__image__container">
+                <div class="form-container">
+                    <form action="{{ url_for('registration') }}" method="POST">
+
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm_password">Confirm Password:</label>
+                            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>    
+        <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>world hotel</h3>
+          <p>
+            World hotel is a premier hotel booking website that offers a seamless and
+            convenient way to find and book accommodations over the UK.
+          </p>
+          <p>
+            With a user-friendly interface and a vast selection of hotels,
+            World hotel aims to provide a stress-free experience for travelers
+            seeking the perfect stay.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+              <li>About Us</li>
+              <li>Our Team</li>
+              <li>blog</li>
+              <li>Book</li>
+              <li>Contact Us</li>  
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <li>FAQs</li>
+          <li>Terms & Conditions</li>
+          <li>Privacy Policy</li>
+        </div>
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <li>Social Media</li>
+          <li>Help Center</li>
+          <li>Partnerships</li>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024. All rights reserved.
+      </div>
+    </footer>
+</body>
+</html>               

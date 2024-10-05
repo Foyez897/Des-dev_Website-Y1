@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Bookings</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Booking ID</th>
+                <th>Date</th>
+                <th>Service/Product</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2024-04-01</td>
+                <td>Hotel Room</td>
+                <td>Confirmed</td>
+                <td>
+                    <button onclick="viewBooking(1)">View</button>
+                    <button onclick="modifyBooking(1)">Modify</button>
+                    <button onclick="cancelBooking(1)">Cancel</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2024-04-05</td>
+                <td>Flight Ticket</td>
+                <td>Pending</td>
+                <td>
+                    <button onclick="viewBooking(2)">View</button>
+                    <button onclick="modifyBooking(2)">Modify</button>
+                    <button onclick="cancelBooking(2)">Cancel</button>
+                </td>
+            </tr>
+            <!-- Add more rows for additional bookings -->
+        </tbody>
+    </table>
+
+    <script>
+        function viewBooking(bookingId) {
+            // Implement logic to view booking details for the given booking ID
+            console.log("View Booking with ID: " + bookingId);
+        }
+
+        function modifyBooking(bookingId) {
+            // Implement logic to modify booking for the given booking ID
+            console.log("Modify Booking with ID: " + bookingId);
+        }
+
+        function cancelBooking(bookingId) {
+            // Implement logic to cancel booking for the given booking ID
+            console.log("Cancel Booking with ID: " + bookingId);
+        }
+    </script>
+</body>
+</html>

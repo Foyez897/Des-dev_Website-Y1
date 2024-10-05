@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WH Booking System - Hotels</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-right: auto;
+        }
+        nav ul {
+            list-style: none;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffc107;
+        }
+        .hotels {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .hotels h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        .hotel {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .hotel:hover {
+            transform: translateY(-5px);
+        }
+        .hotel img {
+            width: 200px; /* Adjust the width as needed */
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .hotel h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .hotel p {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #666;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #ffc107;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #ff9800;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>WH Booking System</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/hotels">Hotels</a></li>
+                    <li><a href="/bookings">Bookings</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <!-- Add links for user authentication -->
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hotels">
+        <div class="container">
+            <h2>Our Hotels in the UK</h2>
+            <div class="hotel">
+                <img src="{{ url_for ('static', filename = 'calif-A.jpg')}}" alt="Hotel A - Aberdeen">
+                <h3> Grand Hotel - Aberdeen</h3>
+                <p>Capacity: 100 rooms</p>
+                <p>Standard Room Price: £80</p>
+                <p>Double Room Price: £120</p>
+                <p>Amenities: Free WiFi, Swimming Pool</p>
+                <a href="/Bookings/bookings.html" class="btn">Book Now</a>
+            </div>
+                        <div class="hotel">
+                <img src="{{ url_for ('static', filename = 'breeze.avif')}}" alt="Hotel C - Bristol">
+                <h3> Breeze Park - Bristol</h3>
+                <p>Capacity: 80 rooms</p>
+                <p>Standard Room Price: £70</p>
+                <p>Double Room Price: £110</p>
+                <p>Amenities: Free WiFi, Spa</p>
+                <a href="/Bookings/bookings.html" class="btn">Book Now</a>
+            </div>
+            <div class="hotel">
+                <img src="{{ url_for ('static', filename = 'serene.avif')}}" alt="Hotel D - Edinburgh">
+                <h3> Serene Hotel - Edinburgh</h3>
+                <p>Capacity: 90 rooms</p>
+                <p>Standard Room Price: £75</p>
+                <p>Double Room Price: £115</p>
+                <p>Amenities: Free WiFi, Restaurant</p>
+                <a href="/Bookings/bookings.html" class="btn">Book Now</a>
+            </div>
+            <div class="hotel">
+                <img src="{{ url_for ('static', filename = 'pride.avif')}}" alt="Hotel E - Cardiff">
+                <h3> Calif Pride Hotel - Cardiff</h3>
+                <p>Capacity: 110 rooms</p>
+                <p>Standard Room Price: £85</p>
+                <p>Double Room Price: £130</p>
+                <p>Amenities: Free WiFi, Beach Access</p>
+                <a href="/Bookings/bookings.html" class="btn">Book Now</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <!-- Footer content here -->
+        <!-- Add links for password update and booking management -->
+        <p><a href="/Bookings/password_update.html">Update Password</a></p>
+        <p><a href="/Bookings/booking_management.html">Manage Bookings</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <title>World Hotel</title>
+    <title>Login</title>
+    <style>
+        body {
+        background-color: #f0f0f0; /* Change background color of the whole page */
+    }
+
+        .login-container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6347;
+            border: none;
+            border-radius: 3px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="nav__logo">World Hotel</div>
+    <ul class="nav__links">
+      <li class="link"><a href="{{ url_for('index') }}">Home</a></li>
+      <li class="link"><a href="{{ url_for('registration') }}">Register</a></li>
+      <li class="link"><a href="{{ url_for('login') }}">Login</a></li> 
+      <li class="link"><a href="{{ url_for('hotels') }}">Hotels</a></li>     
+      <li class="link"><a href="{{ url_for('bookings') }}">Booking</a></li>
+      <li class="link"><a href="{{ url_for('contact') }}">Contact</a></li>
+      <li class="link"><a href="{{ url_for('admin') }}">Admin</a></li>
+    </ul>
+  </nav>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/verify-login" method="POST">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+      <footer class="footer">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <h3>world hotel</h3>
+        <p>
+          World hotel is a premier hotel booking website that offers a seamless and convenient way to find and book accommodations over the UK.
+        </p>
+        <p>
+          With a user-friendly interface and a vast selection of hotels, World hotel aims to provide a stress-free experience for travelers seeking the perfect stay.
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li>About Us</li>
+          <li>Our Team</li>
+          <li>Blog</li>
+          <li>Book</li>
+          <li>Contact Us</li>  
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <li>FAQs</li>
+        <li>Terms & Conditions</li>
+        <li>Privacy Policy</li>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <li>Social Media</li>
+        <li>Help Center</li>
+        <li>Partnerships</li>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2024. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>

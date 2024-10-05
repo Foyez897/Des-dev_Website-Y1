@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Hotel Booking System - Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="checkIfLogged.js" defer></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section.hero {
+            background-image: url('/images/hero.avif');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        section.hero h2 {
+            margin-bottom: 20px;
+        }
+
+        section.registration {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form-container {
+            width: 300px;
+            margin: 0 auto; /* Center the form horizontally */
+            position: relative;
+            top: -50px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left; /* Align form labels and inputs to the left */
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button.btn {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button.btn:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>World Hotel Booking System</h1>
+            <nav>
+                <ul>
+                    <li><a href="/Bookings/index.html">Home</a></li>
+                    <li><a href="/Bookings/hotels.html">Hotels</a></li>
+                    <li><a href="/Bookings/booking.html">Bookings</a></li>
+                    <li><a href="/Bookings/contact.html">Contact</a></li>
+                    <!-- Add admin login link -->
+                    <li><a href="/Bookings/admin-login.html">Admin Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h2>Find Your Perfect Stay</h2>
+            <p>Discover amazing hotels and book your next getaway with ease.</p>
+            <section class="registration">
+                <div class="container form-container">
+                    <h2>Register</h2>
+                    <form action="/Bookings/login.html" method="POST">
+
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm_password">Confirm Password:</label>
+                            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn">Register</button>
+                        </div>
+                    </form>
+
+                </div>
+            </section>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 WH Booking System. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

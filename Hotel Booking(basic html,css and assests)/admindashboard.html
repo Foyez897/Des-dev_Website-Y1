@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        /* Additional CSS styles for admin dashboard */
+        body {
+            background-image: url("/images/background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dashboard-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+        }
+        .dashboard-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .dashboard-container p {
+            margin-bottom: 20px;
+        }
+        .dashboard-container .admin-options {
+            display: flex;
+            justify-content: center;
+        }
+        .dashboard-container .admin-options a {
+            background-color: #ffc107;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .dashboard-container .admin-options a:hover {
+            background-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome to Admin Dashboard</h2>
+        <p>You are logged in as Admin.</p>
+        <div class="admin-options">
+            <a href="/admin_password_update.html">Update Password</a>
+            <!-- Add other admin options here -->
+        </div>
+    </div>
+</body>
+</html>
